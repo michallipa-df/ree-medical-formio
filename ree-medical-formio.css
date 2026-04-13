@@ -25,20 +25,22 @@ body, .formio-form {
 }
 
 /* --- Wizard header / progress bar --- */
-ul.pagination {
+nav[aria-label="Wizard navigation"] ul.pagination {
   display: flex !important;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 6px;
   margin-bottom: 24px;
   padding: 0;
   list-style: none;
 }
 
-ul.pagination li a,
-ul.pagination li button,
-ul.pagination li span {
+nav[aria-label="Wizard navigation"] .page-item {
+  list-style: none;
+}
+
+nav[aria-label="Wizard navigation"] .page-link {
   display: block;
-  padding: 10px 18px;
+  padding: 10px 20px;
   background: var(--ree-white);
   color: var(--ree-navy);
   border: 1.5px solid var(--ree-border);
@@ -50,19 +52,16 @@ ul.pagination li span {
   transition: all 0.2s;
 }
 
-ul.pagination li.active a,
-ul.pagination li.active span {
+nav[aria-label="Wizard navigation"] .page-item.active .page-link {
   background: var(--ree-navy) !important;
   color: var(--ree-white) !important;
   border-color: var(--ree-navy) !important;
 }
 
-ul.pagination li a:hover,
-ul.pagination li button:hover {
+nav[aria-label="Wizard navigation"] .page-link:hover {
   background: var(--ree-light) !important;
   color: var(--ree-navy) !important;
 }
-
 .wizard-page-menu {
   display: flex;
   gap: 0;
