@@ -27,6 +27,40 @@ body, .formio-form {
 /* --- Wizard header / progress bar --- */
 ul.pagination {
   display: flex !important;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+ul.pagination li a,
+ul.pagination li button,
+ul.pagination li span {
+  display: block;
+  padding: 10px 18px;
+  background: var(--ree-white);
+  color: var(--ree-navy);
+  border: 1.5px solid var(--ree-border);
+  border-radius: var(--ree-radius);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+ul.pagination li.active a,
+ul.pagination li.active span {
+  background: var(--ree-navy) !important;
+  color: var(--ree-white) !important;
+  border-color: var(--ree-navy) !important;
+}
+
+ul.pagination li a:hover,
+ul.pagination li button:hover {
+  background: var(--ree-light) !important;
+  color: var(--ree-navy) !important;
 }
 
 .wizard-page-menu {
