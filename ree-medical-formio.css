@@ -25,9 +25,8 @@ body, .formio-form {
 }
 
 /* --- Wizard header / progress bar --- */
-.formio-wizard-nav-container,
 ul.pagination {
-  display: none !important;
+  display: flex !important;
 }
 
 .wizard-page-menu {
